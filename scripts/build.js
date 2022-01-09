@@ -15,6 +15,7 @@ const metadata = {
     version: package.version,
     description: package.description,
     author: package.author,
+    license: package.license,
     homepage: package.homepage,
     supportURL: package.bugs.url,
     updateURL: "https://raw.githubusercontent.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/main/dist/index.user.js",

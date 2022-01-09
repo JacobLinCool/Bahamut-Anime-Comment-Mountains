@@ -1,8 +1,9 @@
 // ==UserScript==
 // @name         Bahamut Anime Comment Mountains
-// @version      0.1.0
+// @version      0.1.1
 // @description  彈幕密度山脈 for 巴哈姆特動畫瘋
 // @author       JacobLinCool <jacoblincool@gmail.com> (https://github.com/JacobLinCool)
+// @license      MIT
 // @homepage     https://github.com/JacobLinCool/Bahamut-Anime-Comment-Mountains#readme
 // @supportURL   https://github.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/issues
 // @updateURL    https://raw.githubusercontent.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/main/dist/index.user.js
