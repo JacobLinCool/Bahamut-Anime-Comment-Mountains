@@ -1,0 +1,17 @@
+{
+    "name": "bahamut-anime-comment-mountains",
+    "version": "0.1.0",
+    "description": "彈幕密度山脈 for 巴哈姆特動畫瘋",
+    "main": "index.js",
+    "scripts": {
+        "format": "prettier --write \"**/*.{js,json,md}\" \"!dist\"",
+        "build": "node scripts/build.js"
+    },
+    "keywords": [],
+    "author": "JacobLinCool <jacoblincool@gmail.com> (https://github.com/JacobLinCool)",
+    "license": "MIT",
+    "devDependencies": {
+        "esbuild": "^0.14.11",
+        "prettier": "^2.5.1"
+    }
+}
