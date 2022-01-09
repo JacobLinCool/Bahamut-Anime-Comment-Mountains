@@ -15,6 +15,11 @@ const metadata = {
     version: package.version,
     description: package.description,
     author: package.author,
+    homepage: package.homepage,
+    supportURL: package.bugs.url,
+    updateURL: "https://raw.githubusercontent.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/main/dist/index.user.js",
+    downloadURL:
+        "https://raw.githubusercontent.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/main/dist/index.user.js",
     namespace: "http://tampermonkey.net/",
     match: "https://ani.gamer.com.tw/animeVideo.php?sn=*",
     icon: "https://www.google.com/s2/favicons?domain=gamer.com.tw",
@@ -28,5 +33,5 @@ const header = [
 ]
     .map((x) => "// " + x)
     .join("\n");
-writeFileSync("./dist/index.js", header + "\n\n" + readFileSync("./dist/index.js", "utf8"), "utf8");
+writeFileSync("./dist/index.user.js", header + "\n\n" + readFileSync("./dist/index.js", "utf8"), "utf8");
 process.stdout.write("Done\n");

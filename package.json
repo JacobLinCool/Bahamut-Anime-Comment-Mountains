@@ -13,5 +13,13 @@
     "devDependencies": {
         "esbuild": "^0.14.11",
         "prettier": "^2.5.1"
+    },
+    "homepage": "https://github.com/JacobLinCool/Bahamut-Anime-Comment-Mountains#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JacobLinCool/Bahamut-Anime-Comment-Mountains.git"
+    },
+    "bugs": {
+        "url": "https://github.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/issues"
     }
 }
