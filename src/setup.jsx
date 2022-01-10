@@ -113,7 +113,7 @@ function create_panel() {
                 </div>
                 <div class="ani-setting-item ani-flex">
                     <div class="ani-setting-label">
-                        <span class="ani-setting-label__mian">山脈透明度</span>
+                        <span class="ani-setting-label__mian">不透明度</span>
                         <span class="ani-setting-label__sub" id="cm-opacity-label">
                             {cfg.opacity * 100}%
                         </span>
