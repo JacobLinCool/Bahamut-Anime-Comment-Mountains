@@ -2,7 +2,11 @@ lockfileVersion: 5.3
 
 specifiers:
   esbuild: ^0.14.11
+  preact: ^10.6.4
   prettier: ^2.5.1
+
+dependencies:
+  preact: 10.6.4
 
 devDependencies:
   esbuild: 0.14.11
@@ -178,6 +182,10 @@ packages:
       esbuild-windows-64: 0.14.11
       esbuild-windows-arm64: 0.14.11
     dev: true
+
+  /preact/10.6.4:
+    resolution: {integrity: sha512-WyosM7pxGcndU8hY0OQlLd54tOU+qmG45QXj2dAYrL11HoyU/EzOSTlpJsirbBr1QW7lICxSsVJJmcmUglovHQ==}
+    dev: false
 
   /prettier/2.5.1:
     resolution: {integrity: sha512-vBZcPRUR5MZJwoyi3ZoyQlc1rXeEck8KgeC9AwwOn+exuxLxq5toTRDTSaVrXHxelDMHy9zlicw8u66yxoSUFg==}

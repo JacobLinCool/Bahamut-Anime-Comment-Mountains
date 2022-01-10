@@ -1,10 +1,10 @@
 {
     "name": "bahamut-anime-comment-mountains",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "description": "彈幕密度山脈 for 巴哈姆特動畫瘋",
     "main": "index.js",
     "scripts": {
-        "format": "prettier --write \"**/*.{js,json,md}\" \"!dist\"",
+        "format": "prettier --write \"**/*.{js,jsx,json,md}\" \"!dist\"",
         "build": "node scripts/build.js"
     },
     "keywords": [],
@@ -21,5 +21,8 @@
     },
     "bugs": {
         "url": "https://github.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/issues"
+    },
+    "dependencies": {
+        "preact": "^10.6.4"
     }
 }

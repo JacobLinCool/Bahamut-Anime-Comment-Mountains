@@ -2,7 +2,13 @@ const { spawnSync } = require("child_process");
 const { readFileSync, writeFileSync } = require("fs");
 
 process.stdout.write("Building... ");
-spawnSync("npx esbuild --bundle --outdir=dist --minify --target=es6 src/index.js", { shell: true });
+spawnSync(
+    "npx esbuild --bundle --outdir=dist --minify --target=es6 --jsx-factory=h --jsx-fragment=Fragment src/index.js",
+    {
+        shell: true,
+        stdio: "inherit",
+    },
+);
 process.stdout.write("Done\n");
 
 process.stdout.write("Generating Metadata... ");
