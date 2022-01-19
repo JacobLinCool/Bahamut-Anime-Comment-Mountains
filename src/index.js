@@ -159,14 +159,7 @@ function draw_mountains(points) {
             dy2 = 0;
         }
 
-        ctx.bezierCurveTo(
-            prev_point.x - dx1,
-            prev_point.y - dy1,
-            curr_point.x + dx2,
-            curr_point.y + dy2,
-            curr_point.x,
-            curr_point.y,
-        );
+        ctx.bezierCurveTo(prev_point.x - dx1, prev_point.y - dy1, curr_point.x + dx2, curr_point.y + dy2, curr_point.x, curr_point.y);
 
         dx1 = dx2;
         dy1 = dy2;

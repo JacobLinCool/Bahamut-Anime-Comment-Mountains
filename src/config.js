@@ -7,9 +7,7 @@ const default_configs = {
     threshold: 300,
 };
 
-const configs = JSON.parse(
-    localStorage.getItem("bahamut-anime-comment-mountains-configs") || JSON.stringify(default_configs),
-);
+const configs = JSON.parse(localStorage.getItem("bahamut-anime-comment-mountains-configs") || JSON.stringify(default_configs));
 
 export function get(key) {
     return configs[key];
