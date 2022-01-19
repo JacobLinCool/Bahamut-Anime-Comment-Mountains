@@ -77,3 +77,6 @@ typings/
 
 # macOS DS_Store file
 **/.DS_Store
+
+# dist
+dist/

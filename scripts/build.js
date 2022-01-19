@@ -20,13 +20,13 @@ const header = make_header();
 process.stdout.write("Done\n");
 
 process.stdout.write("Writing to dist... ");
-writeFileSync(resolve(dist, "index.user.js"), header + "\n\n" + bundled);
-writeFileSync(resolve(dist, "index.min.user.js"), header + "\n\n" + minified);
+writeFileSync(resolve(dist, "baha-anime-mountains.user.js"), header + "\n\n" + bundled);
+writeFileSync(resolve(dist, "baha-anime-mountains.min.user.js"), header + "\n\n" + minified);
 process.stdout.write("Done\n");
 
 console.log("----------------------------------------");
-console.log(`Bundled: ${(statSync(resolve(dist, "index.user.js")).size / 1024).toFixed(1)} KB`);
-console.log(`Minified: ${(statSync(resolve(dist, "index.min.user.js")).size / 1024).toFixed(1)} KB`);
+console.log(`Bundled: ${(statSync(resolve(dist, "baha-anime-mountains.user.js")).size / 1024).toFixed(1)} KB`);
+console.log(`Minified: ${(statSync(resolve(dist, "baha-anime-mountains.min.user.js")).size / 1024).toFixed(1)} KB`);
 
 function build() {
     const bundled = run("npx esbuild --bundle --target=es6 --jsx-factory=h --jsx-fragment=Fragment src/index.js");
@@ -57,8 +57,8 @@ function make_header() {
         license: package.license,
         homepage: package.homepage,
         supportURL: package.bugs.url,
-        updateURL: "https://raw.githubusercontent.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/main/dist/index.min.user.js",
-        downloadURL: "https://raw.githubusercontent.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/main/dist/index.min.user.js",
+        updateURL: "https://github.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/raw/dist/baha-anime-mountains.min.user.js",
+        downloadURL: "https://github.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/raw/dist/baha-anime-mountains.min.user.js",
         namespace: "http://tampermonkey.net/",
         match: "https://ani.gamer.com.tw/animeVideo.php?sn=*",
         icon: "https://www.google.com/s2/favicons?domain=gamer.com.tw",
