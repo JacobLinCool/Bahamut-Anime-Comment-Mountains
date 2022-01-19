@@ -6,8 +6,8 @@
 // @license      MIT
 // @homepage     https://github.com/JacobLinCool/Bahamut-Anime-Comment-Mountains#readme
 // @supportURL   https://github.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/issues
-// @updateURL    https://raw.githubusercontent.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/main/dist/index.user.js
-// @downloadURL  https://raw.githubusercontent.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/main/dist/index.user.js
+// @updateURL    https://raw.githubusercontent.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/main/dist/index.min.user.js
+// @downloadURL  https://raw.githubusercontent.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/main/dist/index.min.user.js
 // @namespace    http://tampermonkey.net/
 // @match        https://ani.gamer.com.tw/animeVideo.php?sn=*
 // @icon         https://www.google.com/s2/favicons?domain=gamer.com.tw

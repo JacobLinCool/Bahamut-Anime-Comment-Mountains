@@ -21,7 +21,7 @@
 1. 請先安裝 Tampermonkey 或其他網頁腳本管理工具
 2. 多種方式任君選擇
     - 前往 [Greasy Fork](https://greasyfork.org/zh-TW/scripts/438287-bahamut-anime-comment-mountains) 下載
-    - 直接下載 [dist/index.user.js](https://github.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/raw/main/dist/index.user.js)
+    - 直接下載 [dist/index.min.user.js](https://github.com/JacobLinCool/Bahamut-Anime-Comment-Mountains/raw/main/dist/index.min.user.js)
 
 ## 截圖
 
