@@ -4,7 +4,7 @@
     "description": "彈幕密度山脈 for 巴哈姆特動畫瘋",
     "main": "index.js",
     "scripts": {
-        "format": "prettier --write \"**/*.{js,jsx,json,md}\" \"!dist\"",
+        "format": "prettier --write \"**/*.{js,jsx,yml,yaml,json,md}\" \"!dist\"",
         "build": "node scripts/build.js"
     },
     "keywords": [],
