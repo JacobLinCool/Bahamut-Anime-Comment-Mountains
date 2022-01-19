@@ -5,9 +5,11 @@ import { cfg, reset } from "./config.js";
 
 let canvas, ctx;
 let comments = [];
+let video_duration = null;
 
 (async function () {
     await sleep(cfg.wait);
+    observe_video_src();
     let elms = setup();
     canvas = elms.canvas;
     ctx = elms.ctx;
@@ -59,7 +61,7 @@ async function get_comments(ignore = false) {
  */
 function calc_heights() {
     comments = comments.sort((a, b) => a.time - b.time);
-    const width = comments[comments.length - 1].time / cfg.segments;
+    const width = (video_duration || comments[comments.length - 1].time) / cfg.segments;
     log("Width", width);
 
     const heights = new Array(cfg.segments).fill(0);
@@ -70,6 +72,7 @@ function calc_heights() {
         }
         heights[idx]++;
     }
+    heights.splice(cfg.segments, heights.length - cfg.segments);
     log("Heights", heights);
 
     const max = Math.max(...heights);
@@ -199,4 +202,21 @@ function set_global_hook() {
             },
         });
     }
+}
+
+function observe_video_src() {
+    const target = document.querySelector("video");
+    const config = { attributes: true, attributeFilter: ["src"] };
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.attributeName === "src") {
+                target.addEventListener("loadedmetadata", () => {
+                    log("Real Video Duration", target.duration);
+                    video_duration = target.duration * 10;
+                    paint();
+                });
+            }
+        });
+    });
+    observer.observe(target, config);
 }

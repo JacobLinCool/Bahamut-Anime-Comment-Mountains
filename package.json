@@ -1,6 +1,6 @@
 {
     "name": "bahamut-anime-comment-mountains",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "description": "彈幕密度山脈 for 巴哈姆特動畫瘋",
     "main": "index.js",
     "scripts": {

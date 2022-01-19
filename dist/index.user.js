@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Bahamut Anime Comment Mountains
-// @version      0.2.1
+// @version      0.2.2
 // @description  彈幕密度山脈 for 巴哈姆特動畫瘋
 // @author       JacobLinCool <jacoblincool@gmail.com> (https://github.com/JacobLinCool)
 // @license      MIT
@@ -630,9 +630,11 @@
   var canvas;
   var ctx;
   var comments = [];
+  var video_duration = null;
   (function() {
     return __async(this, null, function* () {
       yield sleep(cfg.wait);
+      observe_video_src();
       let elms = setup();
       canvas = elms.canvas;
       ctx = elms.ctx;
@@ -669,7 +671,7 @@
   }
   function calc_heights() {
     comments = comments.sort((a2, b2) => a2.time - b2.time);
-    const width = comments[comments.length - 1].time / cfg.segments;
+    const width = (video_duration || comments[comments.length - 1].time) / cfg.segments;
     log("Width", width);
     const heights = new Array(cfg.segments).fill(0);
     let idx = 0;
@@ -679,6 +681,7 @@
       }
       heights[idx]++;
     }
+    heights.splice(cfg.segments, heights.length - cfg.segments);
     log("Heights", heights);
     const max = Math.max(...heights);
     log("Max", max);
@@ -770,5 +773,21 @@
         }
       });
     }
+  }
+  function observe_video_src() {
+    const target = document.querySelector("video");
+    const config = { attributes: true, attributeFilter: ["src"] };
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === "src") {
+          target.addEventListener("loadedmetadata", () => {
+            log("Real Video Duration", target.duration);
+            video_duration = target.duration * 10;
+            paint();
+          });
+        }
+      });
+    });
+    observer.observe(target, config);
   }
 })();
